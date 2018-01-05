@@ -1,4 +1,4 @@
-class RemoveTypeFromEvents < ActiveRecord::Migration[5.1]
+class RemoveTypeFromEvent < ActiveRecord::Migration[5.1]
   def change
     remove_column :events, :type, :string
   end
