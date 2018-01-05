@@ -1,3 +1,7 @@
+<div class="card card-inverse card-primary mb-3 text-center form-horizontal">
+<div class="card-block">
+
+
 <%= form_with(model: event, local: true) do |form| %>
   <% if event.errors.any? %>
     <div id="error_explanation">
@@ -10,13 +14,14 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<div class="row">
+<div class="col-md-6">
+  <div class="form-group">
     <%= form.label :title %>
     <%= form.text_field :title, id: :event_title %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
     <%= form.text_area :description, id: :event_description %>
   </div>
@@ -30,28 +35,37 @@
     <%= form.radio_button :event_type, 'Private_event' %>
     <%= form.label :event_type, 'Private' %>
   </div>
+</div>
 
-  <div class="field">
-    <%= form.label :main_image %>
-    <%= form.text_area :main_image, id: :event_main_image %>
-  </div>
+<div class="col-md-6">
+    <div class="form-group">
+      <%= form.label :main_image %>
+      <%= form.file_field :main_image %>
+    
+    </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :date %>
     <%= form.date_select :date, id: :event_date %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :time %>
     <%= form.time_select :time, id: :event_time %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :location %>
     <%= form.text_field :location, id: :event_location %>
   </div>
+</div>
+</div>
 
   <div class="actions">
-    <%= form.submit %>
-  </div>
+     <%= form.submit 'New Event', class: 'btn btn-success btn-block' %>
+    </div>
 <% end %>
+
+
+</div>
+</div>

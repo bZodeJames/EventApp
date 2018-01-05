@@ -1,3 +1,18 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    background-color: #3CF297;
+    text-align: center;
+}
+.card-block {
+    font-family: Maven Pro, sans-serif;
+}
+.card {
+    font-family: Maven Pro, sans-serif;
+    width: 50%;
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
