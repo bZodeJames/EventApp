@@ -1,40 +1,43 @@
 <p id="notice"><%= notice %></p>
-
+<% if @event_item != nil %>
 <p>
   <strong>Title:</strong>
-  <%= @event.title %>
+  <%= @event_item.title %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @event.description %>
+  <%= @event_item.description %>
 </p>
 
 <p>
   <strong>Event Type:</strong>
-  <%= @event.event_type %>
+  <%= @event_item.event_type %>
 </p>
 
 
 <p>
   <strong>Main image:</strong>
-  <%= @event.main_image %>
+  <%= @event_item.main_image %>
 </p>
 
 <p>
   <strong>Date:</strong>
-  <%= @event.date %>
+  <%= @event_item.date %>
 </p>
 
 <p>
   <strong>Time:</strong>
-  <%= @event.time %>
+  <%= @event_item.time %>
 </p>
 
 <p>
   <strong>Location:</strong>
-  <%= @event.location %>
+  <%= @event_item.location %>
 </p>
+<% else %>
+<h1>No events!</h1>
+<% end %>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Edit', edit_event_path(@event_item) %> |
 <%= link_to 'Back', events_path %>

@@ -5,7 +5,6 @@
 		main_image: "asdfasdfasdf",
 		date: "2/12/18",
     time: "2:30 pm",
-    location: "asdfasfdasfd",
-    name: "public"
+    location: "asdfasfdasfd"
 		)
 end
