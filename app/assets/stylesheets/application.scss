@@ -15,5 +15,16 @@
  */
  @import "bootstrap";
 body {
-    background-color: #3cf297;
+    background-color: #eeeeee;
+    margin: 0 3em;
+}
+.form-group {
+    color: black;
+}
+a:visted {
+    color: white !important;
+}
+
+.show-img {
+  width: 45%;
 }

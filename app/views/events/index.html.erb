@@ -4,34 +4,20 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'New Event', new_event_path, class: "btn btn-primary" %>
 
 <div class="card-deck">
-  <div class="card">
-    <%= image_tag ("boattetons-2.jpg"),width: 300,  alt: "Profile Image", class: "card-img-top" %>
-    <div class="card-body">
-      <h5 class="card-title">Graduation</h5>
-      <p class="card-text">January 5th | Bottega </p>
-    </div>
-  </div>
 
+  <% @event_items.each do |event| %>
    <div class="card">
     <%= image_tag ("boattetons-2.jpg"),width: 300,  alt: "Profile Image", class: "card-img-top" %>
     <div class="card-body">
-      <h5 class="card-title">Graduation</h5>
+      <h5 class="card-title"><%= link_to event.title, event %></h5>
       <p class="card-text">January 5th | Bottega </p>
-      <button type="button" class="btn btn-primary">Primary</button>
 
     </div>
   </div>
+<% end %>
 
-  <div class="card">
-    <%= image_tag ("boattetons-2.jpg"),width: 300,  alt: "Profile Image", class: "card-img-top" %>
-    <div class="card-body">
-      <h5 class="card-title">Graduation</h5>
-      <p class="card-text">January 5th | Bottega </p>
-    </div>
-  </div>
-</div>
 
 <br>

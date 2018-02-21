@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20180105222513) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "event_type", default: 0
-    t.json "avatars"
     t.bigint "user_id"
+    t.json "avatars"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 

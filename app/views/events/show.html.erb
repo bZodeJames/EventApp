@@ -3,29 +3,29 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
            <div class="card-show" style="width: 60rem;">
             <h1 class="card-title">Event Title</h1>
-              <img class="card-img-top" src="https://d29fhpw069ctt2.cloudfront.net/photo/31795/preview/photo-1436285122087-89584a1d9398_npreviews_824a.jpg", alt="Card image cap">
+              <img class="card-img-top show-img" src="https://d29fhpw069ctt2.cloudfront.net/photo/31795/preview/photo-1436285122087-89584a1d9398_npreviews_824a.jpg", alt="Card image cap">
               <div class="card-block">
-                
+                <br>
+                <% if user_signed_in? %>
+                  <%= link_to "RSVP", register_event_path, class: "btn btn-primary" %>
+                  <% else %>
+                  <p>Sign in to register</p>
+                <% end %>
               </div>
             </div>
         </div>
-        
-        <div class="col-md-6">
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
           <h1>
           Description
         </h1>
         <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5503.536318008713!2d-111.89973318713098!3d40.42824577286959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d8554c917de07%3A0x865ac5eda44125a!2sBottega!5e1!3m2!1sen!2sus!4v1515181157741" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-            <br>
-            <button type="button" class="btn btn-primary">RSVP</button>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5503.536318008713!2d-111.89973318713098!3d40.42824577286959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d8554c917de07%3A0x865ac5eda44125a!2sBottega!5e1!3m2!1sen!2sus!4v1515181157741" width="600" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+            
         </div>
       </div>
-    </div>
-  </div>
 </div>
 

@@ -2,59 +2,59 @@
 <div class="card card-inverse card-primary mb-3 text-center form-horizontal">
 <div class="card-block">
 
+  <%= form_with(model: @event_item, local: true) do |form| %>
 
-<%= form_with(model: @event_items, local: true) do |form| %>
-<div class="row">
-<div class="col-md-6">
-  <div class="form-group">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :event_title %>
-  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :title %>
+        <%= form.text_field :title, id: :event_title %>
+      </div>
 
-  <div class="form-group">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :event_description %>
-  </div>
+      <div class="form-group">
+        <%= form.label :description %>
+        <%= form.text_area :description, id: :event_description %>
+      </div>
 
-  <div class="form-group">
-    <%= form.radio_button :event_type, 'public_event' %>
-    <%= form.label :event_type, 'Public' %>
-  </div>
+      <div class="form-group">
+        <%= form.radio_button :event_type, 'public_event' %>
+        <%= form.label :event_type, 'Public' %>
+      </div>
 
-  <div class="form-group">
-    <%= form.radio_button :event_type, 'Private_event' %>
-    <%= form.label :event_type, 'Private' %>
-  </div>
-</div>
-
-<div class="col-md-6">
-    <div class="form-group">
-      <%= form.label :main_image %>
-      <%= form.file_field :main_image %>
-    
+      <div class="form-group">
+        <%= form.radio_button :event_type, 'Private_event' %>
+        <%= form.label :event_type, 'Private' %>
+      </div>
     </div>
 
-  <div class="form-group">
-    <%= form.label :date %>
-    <%= form.date_select :date, id: :event_date %>
-  </div>
+    <div class="col-md-6">
+        <div class="form-group">
+          <%= form.label :main_image %>
+          <%= form.file_field :main_image %>
+        
+        </div>
 
-  <div class="form-group">
-    <%= form.label :time %>
-    <%= form.time_select :time, id: :event_time %>
-  </div>
+      <div class="form-group">
+        <%= form.label :date %>
+        <%= form.date_select :date, id: :event_date %>
+      </div>
 
-  <div class="form-group">
-    <%= form.label :location %>
-    <%= form.text_field :location, id: :event_location %>
-  </div>
-</div>
-</div>
+      <div class="form-group">
+        <%= form.label :time %>
+        <%= form.time_select :time, id: :event_time %>
+      </div>
 
-  <div class="actions">
-     <%= form.submit 'New Event', class: 'btn btn-success btn-block' %>
+      <div class="form-group">
+        <%= form.label :location %>
+        <%= form.text_field :location, id: :event_location %>
+      </div>
     </div>
-<% end %>
+  </div>
+
+    <div class="actions">
+      <%= form.submit 'New Event', class: 'btn btn-success btn-block' %>
+    </div>
+  <% end %>
 
 
 </div>
